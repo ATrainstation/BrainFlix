@@ -1,0 +1,9 @@
+@import '../../../style/partials/1-Helpers/mixins.scss';
+@import '../../../style/partials/1-Helpers/variables.scss';
+
+.video__title {
+    @include sectionHeader;
+    padding: $largeSpace;
+    font-weight: bold;
+    min-height: 5vh;
+}

@@ -1,0 +1,135 @@
+@import "./variables.scss";
+@import "../2-Basics/typography.scss";
+
+// Fonts
+// @mixin light {
+//     font-family: 'Avenir', sans-serif;
+//     font-weight: 300;
+// }
+
+@mixin regular {
+    font-weight: 400;
+}
+
+// @mixin medium {
+//     font-family: 'Avenir', sans-serif;
+//     font-weight: 500;
+// }
+
+@mixin demi {
+    font-weight: 600;
+}
+
+@mixin bold {
+    font-weight: 700;
+}
+
+// Mobile Text Styles
+@mixin pageHeader {
+    @include bold;
+    font-size: 2.1rem;
+    line-height: 2.75rem;
+} 
+
+@mixin sectionHeader {
+    @include bold;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: $black;
+} 
+
+@mixin subHeader {
+    @include demi;
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+} 
+
+@mixin quoteBlock {
+    @include demi;
+    color: $black;
+    font-size: 1.18rem;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+@mixin bodyCopy {
+    @include regular;
+    font-size: 1.06rem;
+    line-height: 1.6rem;
+} 
+
+@mixin footerCopy {
+    @include regular;
+    font-size: 1rem;
+    line-height: 1.4rem;
+} 
+
+@mixin special-text($medSpace: 1rem) {
+    @include regular;
+    font-size: $medSpace;
+    line-height: 1rem;
+} 
+
+
+// Desktop and Tablet Text Styles
+@mixin dt-pageHeader {
+    @include bold;
+    font-size: 4rem;
+    line-height: 4.6rem;
+} 
+
+@mixin dt-sectionHeader {
+    @include bold;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+} 
+
+@mixin dt-subHeader {
+    @include demi;
+    font-size: 1.8rem;
+    line-height: 2.25rem;
+} 
+
+@mixin dt-bodyCopy {
+    @include regular;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+} 
+
+@mixin dt-footerCopy {
+    @include regular;
+    font-size: 0.85rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.025rem;
+} 
+
+@mixin dt-special-text {
+    @include regular;
+    color: $silver;
+    font-size: 0.93rem;
+    line-height: 1rem;
+} 
+
+@mixin dt-quoteBlock {
+    @include bold;
+    color: $black;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    text-align: justify;
+}
+
+@mixin button ($black) { 
+    background-color: $black;
+    color: $white;
+    height: 54px;
+
+    width: auto;
+    border: none;
+    border-radius: 4px;
+    line-height: 1.3rem;
+    font-size: 1.3rem;
+    
+    &:hover {
+        background-color: $darkblue;
+    }
+}

@@ -1,0 +1,27 @@
+// Colors 
+
+    // Primary
+    $black: #323232; //Primary text color, dark backgrounds
+    $blue: #0095FF;
+    $darkblue: #0065AD;
+    $silver: #AFAFAF; //Secondart text color, inactive Call To Action text color
+    $white: #FFF; //Primary text olor on dark background, light background, active CTA
+    $neonPink: #fed8ee;
+    $neonBlue: #a2e3ef;
+        // Secondary
+    $darkblk: #000;
+    $mercury: #E1E1E1;
+    $alabaster: #FAFAFA;
+    
+
+$tablet: 768px;
+$desktop: 1280px;
+
+
+$spacer: 1rem;
+$minSpace: ($spacer*0.25);
+$smallSpace: ($spacer*0.5);
+
+$largeSpace: ($spacer*1.5);
+$xlargeSpace: ($spacer*2);
+$maxSpace: ($spacer*3);

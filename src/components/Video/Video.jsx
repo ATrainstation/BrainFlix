@@ -1,4 +1,4 @@
-
+import './Video.scss'
 
 export function Video(props) {
     const {image} = props.jsonData[0]
@@ -9,7 +9,7 @@ return (
         <section>
 
         <article className="video__cont">
-            <video className="video" controls poster={image} width="100%" height="auto">
+            <video className="video" controls poster={image} >
 
             </video>
         </article>
