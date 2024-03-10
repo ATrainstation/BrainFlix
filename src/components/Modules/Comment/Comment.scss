@@ -18,6 +18,12 @@
             &__date {
                 justify-self: flex-end;
             } 
+
+            @media (min-width: 1280px) {
+                padding-right: $spacer;
+                border-top: 2px solid $mercury;
+                border-bottom: none;
+            }
 }
 
 .comment {
@@ -37,5 +43,9 @@
     &__date {
         @include special-text(1.1rem);
         color: $silver;
+    }
+
+    @media (min-width: 1280px) {
+        
     }
 }

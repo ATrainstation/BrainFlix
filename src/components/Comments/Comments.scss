@@ -3,7 +3,12 @@
 
 .comments {
 
-    
+    &__counter {
+        padding: 0 $spacer;
+        padding-bottom: $spacer;
+        font-weight: 600;
+    }
+
     &__pfp {
         display: flex;
         background-color: $mercury;
@@ -18,11 +23,15 @@
     &__cont {
         margin: 0 $spacer;
         border-top: 2px solid $mercury;
+
+        @media (min-width: 1280px) {
+            margin: 0 0;
+            border-top: none;
+            // padding-right: $spacer;
+        }
     }
 
-    &__counter {
-        padding: 0 $spacer;
-        padding-bottom: $spacer;
-        font-weight: 600;
-    }
+    
+
+    
 }

@@ -30,7 +30,7 @@
     &__cont {
     position: relative;
     display: inline-block;
-    background-color: $black;
+    background-color: $darkblk;
 
     :hover .next-button {
         opacity: 1;
@@ -40,6 +40,10 @@
 
 @media (min-width: 768px) {
     aspect-ratio: 16/8;
+}
+
+@media (min-width: 1280px) {
+    aspect-ratio: 16/6;
 }
 
 }

@@ -12,4 +12,7 @@
     padding-bottom: $spacer;
     min-height: 5vh;
     
+    @media (min-width: 1280px) {
+        padding-top: $xlargeSpace;
+    }
 }

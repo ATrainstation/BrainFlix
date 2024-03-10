@@ -28,13 +28,19 @@ export function App() {
         <Video videoList={videoList} selectedVideo={selectedVideo}/>
       
 
-      <VideoInfo selectedVideo={selectedVideo}  />
-      <Form />
-      <Comments videoComments={selectedVideo.comments}/>
-
-      <VidList videosList={videoDetails.filter((video) => video.id !== selectedVideo.id)}
-          selectedVideo={getVideoFromId} />
-
+      <section className="dt-bottom__container">
+        <div className="dt-bottom__main">
+          <VideoInfo selectedVideo={selectedVideo}  />
+          <Form />
+          <Comments videoComments={selectedVideo.comments}/>
+        </div>
+  
+        <aside className="dt-bottom__side-list">
+          <VidList videosList={videoDetails.filter((video) => video.id !== selectedVideo.id)}
+              selectedVideo={getVideoFromId} />
+        </aside>
+  
+      </section>
       </main>
     </>
   );
