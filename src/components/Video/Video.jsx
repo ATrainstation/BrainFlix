@@ -10,7 +10,11 @@ export function Video({selectedVideo}) {
       <section>
         <article className="video__cont">
           <video className="video" controls poster={image}></video>
-          <div className="next-button"><img className="next-button__img" src={nextButton}/></div>
+          
+          {/* <div className="next-button">
+            <img className="next-button__img" src={nextButton}/>
+            </div> */}
+       
         </article>
       </section>
     </>

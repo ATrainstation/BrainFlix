@@ -2,8 +2,6 @@ import { Comment } from "../Modules/Comment/Comment";
 
 
 export function Comments({videoComments}) {
-  // const { name, comment, timestamp } = videoComments
-
 
   return (
     <section className="comments__cont">

@@ -1,31 +1,6 @@
 @import "../../style/partials/1-Helpers/variables.scss";
 @import "../../style/partials/1-Helpers/mixins.scss";
 
-.next-button {
-    position: absolute;
-    top: 50%;
-    right: 0; /* Align to the right side */
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.7);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    opacity: 0.11;
-    // transition: opacity 0.3s;
-
-    :hover {
-        opacity: 10;
-      }
-
-
-    &__image{
-    z-index: 10;
-  }
-
-  
-}
 
 .video {
     width: 100%;
@@ -39,8 +14,6 @@
     position: relative;
     display: inline-block;
     background-color: $darkblk;
-
-
   }
 
 @media (min-width: 768px) {
@@ -52,6 +25,29 @@
 }
 
 }
+
   
+// .next-button {
+//     position: absolute;
+//     top: 50%;
+//     right: 0; 
+
+//     transform: translateY(-50%);
+//     font-size: 1.5rem;
+//     color: #fff;
+//     background-color: rgba(0, 0, 0, 0.7);
+//     border: none;
+//     padding-right: $largeSpace;
+//     cursor: pointer;
+//     opacity: 0.05;
+//     transition: opacity 0.3s;
+//     :hover {
+//         opacity: 1;
+//       }
+
+//     &__image{
+//     z-index: 10;
+//   }
+// }
 
   
