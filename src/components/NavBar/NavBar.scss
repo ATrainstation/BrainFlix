@@ -65,4 +65,60 @@
         font-size: 1.3rem;
     }
 }
+
 }
+
+@media (min-width: 768px) {
+
+    .nav-bar {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 100px;
+    
+
+    &__search__form {
+     
+    }
+
+    &__cont {
+    
+    &__logo {
+     align-items: center;
+     justify-content: flex-start;
+     width: auto;
+    }
+
+    &__search {
+     align-items: center;
+    }
+
+    &__profile-pic {
+    align-items: center;
+    order: +1;
+    height: 42px;
+    width: auto;
+    }
+
+    &__button {
+    margin-right: $largeSpace;
+    }
+    }
+
+
+
+    &__search-box {
+
+        
+    &:focus {
+
+    }
+
+    &::placeholder {
+
+    }
+}
+
+    }
+}
+   

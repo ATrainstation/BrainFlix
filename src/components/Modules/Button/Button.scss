@@ -8,6 +8,7 @@
 .button {
   @include button($blue);
   display: flex;
+  height: 40px;
   width: 100%;
   text-align: center;
   align-items: center;
@@ -23,5 +24,5 @@
     justify-self: flex-start;
     width: 30px;
     height: auto;
-  }
+}
 }

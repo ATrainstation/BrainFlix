@@ -6,7 +6,8 @@
         display: flex;
         border-top: 2px solid $mercury;
         border-bottom: 2px solid $mercury;
-        padding: $xlargeSpace $spacer;
+        margin: 0 $spacer;
+        padding: $largeSpace 0;
         justify-content: space-between;
         width: 100%
     }
@@ -15,11 +16,12 @@
         @include subHeader($black);
         display: flex;
         padding-bottom: $largeSpace;
-
     }
+
     &__impressions {
         padding-left: $largeSpace;
     }
+    
     &__likes {
         display: flex;
         width: 100%;
@@ -37,7 +39,6 @@
 
 .video {
     
-
     &__by-date {
         display: flex;
         flex-wrap: wrap;
@@ -49,11 +50,15 @@
             display: flex;
             flex-wrap: wrap;
             width: 50%;
-    
+            
         }
 
-        &__views, &__likes
+        &__views, &__likes {
+            color: $silver;
         &__icon {
-            
+            width: 2rem; 
+            height: auto;
+            padding-right: $smallSpace;
         } 
+}
 }

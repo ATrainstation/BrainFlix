@@ -11,7 +11,7 @@ return ( <header>
         <nav className="nav-bar">
           
           <div className="nav-bar__cont__logo">
-            <img className="nav-bar__logo" src= {LogoImage} alt='BrainFlix Logo'/>
+            <img className="nav-bar__logo" src={LogoImage} alt='BrainFlix Logo'/>
           </div>
   
           <div className="nav-bar__cont__search">
@@ -24,7 +24,9 @@ return ( <header>
           <ProfilePic hasImage={true}/>
           </div>
 
-          <Button isUpload={true}/>
+          <div className='nav-bar__cont__button'>
+            <Button isUpload={true}/>
+            </div>
           
   
         </nav>

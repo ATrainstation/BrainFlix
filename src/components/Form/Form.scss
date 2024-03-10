@@ -1,41 +1,65 @@
 @import "../../style/partials/1-Helpers/variables.scss";
 @import "../../style/partials/1-Helpers/mixins.scss";
 
-
-
 .form-section__cont {
-    display: flex;
-    padding: $spacer $spacer;
-    border-bottom: 2px solid $mercury;
-    width: 100%;
+  display: flex;
+  padding: $spacer $spacer;
+  padding-bottom: $largeSpace;
+  width: 100%;
 }
 
 .form {
-    padding-left: $spacer;
+  padding-left: $spacer;
+  width: 100%;
+
+  &__text-area {
+    display: flex;
+    
+    background-color: $alabaster;
+    padding: 12px;
+    margin-bottom: $largeSpace;
+    border: 1px solid $mercury;
+    border-radius: 4px;
+
+    height: 8rem;
+    min-height: 2.5rem;
+
+    width: 100%;
+    min-width: 240px;
+    resize: none;
+
+    // Style guide says 4px but it looks more like 6px
+    margin-top: 6px;
+
+    &::placeholder {
+      @include bodyCopy;
+      font-size: 1.2rem;
+      color: $black;
+    }
+
+    &:focus {
+        border: 2px solid $blue;
+        }
+  }
+
+  &__cont {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
 
-    &__text-area {
-        padding: 12px;
-        margin-bottom: $spacer;
-        border: 2px solid $mercury;
-        border-radius: 4px;
-        width: 100%;
-        resize: none;
+    &__pfp {
+        padding-top: $largeSpace;
     }
+  }
 
-    &__cont {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-    
-    &__label {
-        @include subHeader($silver);
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-}
-}
+  &__label {
+    @include special-text(1.1rem);
+    color: $silver;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 
+  }
+}
 
 

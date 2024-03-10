@@ -16,8 +16,6 @@
             }
     
             &__date {
-                @include special-text(1.1rem);
-                color: $silver;
                 justify-self: flex-end;
             } 
 }
@@ -34,5 +32,10 @@
     
     &__text {
         padding-left: $largeSpace;
+    }
+
+    &__date {
+        @include special-text(1.1rem);
+        color: $silver;
     }
 }

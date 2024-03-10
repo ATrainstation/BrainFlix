@@ -7,7 +7,9 @@
 
 .video__title {
     @include pageHeader;
-    padding: $largeSpace;
+    padding: 0 $spacer;
+    padding-top: $largeSpace;
+    padding-bottom: $spacer;
     min-height: 5vh;
     
 }

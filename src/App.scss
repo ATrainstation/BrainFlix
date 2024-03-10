@@ -1,6 +1,6 @@
 @import './style/partials/1-Helpers/variables.scss';
 @import './style/partials/1-Helpers/mixins.scss';
-
+@import './components/Form/Form.scss';
 
 * {
   margin: 0;
@@ -10,6 +10,10 @@
 
 body {
   font-family: 'Avenir', sans-serif;
+  
+  // Anti-aliasing text-effect
+  text-shadow: 0 0 1px rgba(51,51,51,0.3);
+
 }
 
 h1 {
@@ -38,3 +42,10 @@ p {
   color: $black;
 }
 
+textarea:focus {
+  border: 2px solid $blue;
+}
+
+textarea::placeholder {
+  font-family: 'Avenir';
+}

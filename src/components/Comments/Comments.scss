@@ -16,11 +16,13 @@
     }
 
     &__cont {
-        padding: $spacer $spacer;
+        margin: 0 $spacer;
+        border-top: 2px solid $mercury;
     }
 
     &__counter {
-        padding: $spacer $spacer;
+        padding: 0 $spacer;
+        padding-bottom: $spacer;
         font-weight: 600;
     }
 }

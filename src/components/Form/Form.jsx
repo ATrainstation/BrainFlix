@@ -16,9 +16,9 @@ export function Form({ selectedVideo }) {
                     <div className="form__cont">
                         <form className="form">
                             <label className="form__label">
-                                JOIN THE CONVERSATION
-                                <textarea className="form__text-area" />
-                            </label>
+                                JOIN THE CONVERSATION </label>
+                                <textarea className="form__text-area" placeholder="Add a new comment"/>
+                            
                         <Button isUpload={false}/>
     
                         </form>
