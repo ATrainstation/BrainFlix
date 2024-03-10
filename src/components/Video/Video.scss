@@ -4,27 +4,35 @@
 .next-button {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    right: 0; /* Align to the right side */
+    transform: translateY(-50%);
     font-size: 1.5rem;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.7);
     border: none;
     padding: 10px;
     cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s;
-    cursor: pointer;
+    opacity: 0.11;
+    // transition: opacity 0.3s;
+
+    :hover {
+        opacity: 10;
+      }
+
 
     &__image{
     z-index: 10;
   }
+
+  
 }
 
 .video {
     width: 100%;
     height: auto;
     display: block;
+    position: relative;
+  
 
 
     &__cont {
@@ -32,10 +40,7 @@
     display: inline-block;
     background-color: $darkblk;
 
-    :hover .next-button {
-        opacity: 1;
-       
-      }
+
   }
 
 @media (min-width: 768px) {

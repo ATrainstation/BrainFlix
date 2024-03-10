@@ -66,11 +66,12 @@
         outline: none;
         
     &:focus {
-    border: 2px solid $blue;
+    outline: 2px solid $blue;
     }
 
     &::placeholder {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        color: $black;
     }
 }
 

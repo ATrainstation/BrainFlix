@@ -6,7 +6,6 @@
     height: 80px;
     width: auto;
     border-radius: 5px;
-    // padding-right: $spacer;
   }
 
   &__title {
@@ -17,12 +16,30 @@
     @include bodyCopy;
   }
 
+  
+  :hover {
+    cursor: pointer;
+  }
+ 
+
 //   Containers
   &__cont {
+    
+    &__thumbnail {
+      :hover {
+        cursor: pointer;
+        transform: scale(1.08);
+        margin-right: $smallSpace;
+      }
+    }
+
     &__video {
       display: flex;
       width: 100%;
       padding-bottom: $spacer;
+
+      
+      
     }
 
     &__info {
@@ -31,16 +48,23 @@
       justify-content: space-between;
       margin-left: $spacer;
       padding: $minSpace 0;
+
     }
 
     &__title {
       display: flex;
       // flex-wrap: wrap;
+      :hover {
+        transform: none;
+      }
     }
 
     &__username {
       display: flex;
       flex-wrap: wrap;
+      :hover {
+        transform: none;
+      }
     }
   }
 }
