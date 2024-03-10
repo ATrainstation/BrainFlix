@@ -1,8 +1,7 @@
 import LogoImage from '../../assets/Logo/BrainFlix-logo.svg';
-import { ProfilePic } from '../ProfilePic/ProfilePic';
+import { ProfilePic } from '../Modules/ProfilePic/ProfilePic';
+import { Button } from '../Modules/Button/Button';
 import './NavBar.scss'
-import { Button } from '../Button/Button';
-import uploadIcon from '../../assets/Icons/upload.svg';
 
 
 export function NavBar() {
@@ -20,9 +19,12 @@ return ( <header>
               <input className="nav-bar__search-box" placeholder='Search'/>
             </form>
           </div>
-  
-          <ProfilePic />
-          <Button uploadIcon={uploadIcon}/>
+
+          <div className="nav-bar__cont__profile-pic">
+          <ProfilePic hasImage={true}/>
+          </div>
+
+          <Button isUpload={true}/>
           
   
         </nav>

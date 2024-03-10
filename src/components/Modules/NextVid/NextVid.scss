@@ -1,0 +1,46 @@
+@import "../../../style/partials/1-Helpers/variables.scss";
+@import "../../../style/partials/1-Helpers/mixins.scss";
+
+.video-list {
+  &__thumbnail {
+    height: 80px;
+    width: auto;
+    border-radius: 5px;
+    // padding-right: $spacer;
+  }
+
+  &__title {
+    @include subHeader($black);
+  }
+
+  &__username {
+    @include bodyCopy;
+  }
+
+//   Containers
+  &__cont {
+    &__video {
+      display: flex;
+      width: 100%;
+      padding-bottom: $spacer;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: $spacer;
+      padding: $minSpace 0;
+    }
+
+    &__title {
+      display: flex;
+      // flex-wrap: wrap;
+    }
+
+    &__username {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

@@ -24,16 +24,13 @@
 
     &__search {
         flex: 1;
-        padding-right: $spacer;
-               
+        padding-right: $largeSpace;
     }
 
-    &__pfp {
-        display: flex;
-        justify-content: flex-end;
-        width: auto;
-        padding: 1rem 0;
-        // padding-left: 5%;
+    &__profile-pic {
+       display: flex;
+       align-items: center;
+       justify-content: flex-end;
     }
     }
 

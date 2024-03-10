@@ -1,0 +1,21 @@
+@import "../../../style/partials/1-Helpers/variables.scss";
+@import "../../../style/partials/1-Helpers/mixins.scss";
+
+
+.profile-pic {
+
+    &__cont {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+&__image {
+    display: flex;
+    background-color: $mercury;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: left;
+}
+}

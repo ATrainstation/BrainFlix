@@ -1,9 +1,13 @@
 @import '../../../style/partials/1-Helpers/mixins.scss';
 @import '../../../style/partials/1-Helpers/variables.scss';
 
+.video__cont__title {
+    width: 100%;
+}
+
 .video__title {
-    @include sectionHeader;
+    @include pageHeader;
     padding: $largeSpace;
-    font-weight: bold;
     min-height: 5vh;
+    
 }

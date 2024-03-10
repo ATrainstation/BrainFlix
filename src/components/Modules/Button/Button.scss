@@ -1,0 +1,27 @@
+@import '../../../style/partials/1-Helpers/variables.scss';
+@import '../../../style/partials/1-Helpers/mixins.scss';
+
+.button__cont {
+   width: 100%;
+}
+
+.button {
+  @include button($blue);
+  display: flex;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  
+  &__text {
+    width: 100%;
+    margin-right: 30px;
+  }
+
+  &__symbol {
+    justify-self: flex-start;
+    width: 30px;
+    height: auto;
+  }
+}

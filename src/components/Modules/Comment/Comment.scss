@@ -1,0 +1,38 @@
+@import "../../../style/partials/1-Helpers/variables.scss";
+@import "../../../style/partials/1-Helpers/mixins.scss";
+
+.comment__cont {
+            display: flex;
+            width: 100%;
+
+            border-bottom: 2px solid $mercury;
+            padding: $spacer 0;
+
+            &__text {
+                display: flex;
+            }
+
+            &__top {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-bottom: $smallSpace;
+            }
+    
+            &__date {
+                @include special-text(1.1rem);
+                color: $silver;
+                justify-self: flex-end;
+            } 
+}
+
+.comment {
+    &__username {
+            @include demi
+
+        }
+
+    &__pfp {
+        display: flex;
+    }
+}

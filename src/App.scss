@@ -1,3 +1,7 @@
+@import './style/partials/1-Helpers/variables.scss';
+@import './style/partials/1-Helpers/mixins.scss';
+
+
 * {
   margin: 0;
   padding: 0;
@@ -7,3 +11,30 @@
 body {
   font-family: 'Avenir', sans-serif;
 }
+
+h1 {
+  @include pageHeader
+}
+
+h2 {
+  @include sectionHeader
+}
+
+h3 {
+  @include subHeader($black);
+}
+
+h4 {
+  @include subHeader($silver);
+  font-size: 1rem;
+}
+
+h5 {
+
+}
+
+p {
+  @include bodyCopy;
+  color: $black;
+}
+

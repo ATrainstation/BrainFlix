@@ -1,0 +1,9 @@
+@import "../../style/partials/1-Helpers/variables.scss";
+
+.video__cont__info {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+
+    width: 100%;
+}

@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("/src/assets/Font/AvenirNextLTPro-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/src/assets/Font/AvenirNextLTPro-Demi.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/src/assets/Font/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
+}
+.nav-bar__cont__upload {
+  width: 100%;
+}
+
+.nav-bar__upload {
+  background-color: #0095FF;
+  color: #FFF;
+  height: 54px;
+  width: auto;
+  border: none;
+  border-radius: 4px;
+  line-height: 1.3rem;
+  font-size: 1.3rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-bar__upload:hover {
+  background-color: #0065AD;
+}/*# sourceMappingURL=Button.css.map */

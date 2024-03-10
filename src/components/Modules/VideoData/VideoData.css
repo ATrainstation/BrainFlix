@@ -1,0 +1,26 @@
+.video__cont__data {
+  display: flex;
+}
+.video__cont__author {
+  display: flex;
+  padding-bottom: 1.5rem;
+}
+.video__cont__likes {
+  display: flex;
+  width: 100%;
+}
+.video__cont__views {
+  display: flex;
+  width: 100%;
+}
+
+.video__by-date {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.video__cont__impressions {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}/*# sourceMappingURL=VideoData.css.map */

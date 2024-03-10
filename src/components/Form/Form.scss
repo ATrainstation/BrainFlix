@@ -1,0 +1,41 @@
+@import "../../style/partials/1-Helpers/variables.scss";
+@import "../../style/partials/1-Helpers/mixins.scss";
+
+
+
+.form-section__cont {
+    display: flex;
+    padding: $spacer $spacer;
+    border-bottom: 2px solid $mercury;
+    width: 100%;
+}
+
+.form {
+    padding-left: $spacer;
+    width: 100%;
+
+    &__text-area {
+        padding: 12px;
+        margin-bottom: $spacer;
+        border: 2px solid $mercury;
+        border-radius: 4px;
+        width: 100%;
+        resize: none;
+    }
+
+    &__cont {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    &__label {
+        @include subHeader($silver);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+}
+}
+
+
+

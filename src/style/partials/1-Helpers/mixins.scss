@@ -27,7 +27,7 @@
 // Mobile Text Styles
 @mixin pageHeader {
     @include bold;
-    font-size: 2.1rem;
+    font-size: 2.06rem;
     line-height: 2.75rem;
 } 
 
@@ -38,17 +38,25 @@
     color: $black;
 } 
 
-@mixin subHeader {
+@mixin subHeader($black) {
     @include demi;
+    color: $black;
     font-size: 1.15rem;
     line-height: 1.5rem;
 } 
 
-@mixin quoteBlock {
-    @include demi;
-    color: $black;
-    font-size: 1.18rem;
-    line-height: 2rem;
+@mixin subHeader2($silver) {
+    @include regular;
+    color: $silver;
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+} 
+
+@mixin labelHeader {
+    @include regular();
+    color: $silver;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
     text-align: justify;
 }
 
@@ -64,8 +72,9 @@
     line-height: 1.4rem;
 } 
 
-@mixin special-text($medSpace: 1rem) {
+@mixin special-text($medSpace: 1rem, $silver: $silver) {
     @include regular;
+    color: $silver;
     font-size: $medSpace;
     line-height: 1rem;
 } 
@@ -126,8 +135,9 @@
     width: auto;
     border: none;
     border-radius: 4px;
-    line-height: 1.3rem;
-    font-size: 1.3rem;
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    font-weight: 400;
     
     &:hover {
         background-color: $darkblue;
