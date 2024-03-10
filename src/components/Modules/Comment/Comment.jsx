@@ -38,7 +38,7 @@ export function Comment({ name, comment, date }) {
     <article className="comment__cont">
       <ProfilePic hasImage={false}/>
 
-      <div className="comments__text">
+      <div className="comment__text">
         <div className="comment__cont__top">
           <div className="comment__cont__username">
             <p className="comment__username">{`${name}`}</p>

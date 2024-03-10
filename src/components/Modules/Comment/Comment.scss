@@ -8,10 +8,6 @@
             border-bottom: 2px solid $mercury;
             padding: $spacer 0;
 
-            &__text {
-                display: flex;
-            }
-
             &__top {
                 display: flex;
                 flex-direction: row;
@@ -34,5 +30,9 @@
 
     &__pfp {
         display: flex;
+    }
+    
+    &__text {
+        padding-left: $largeSpace;
     }
 }
