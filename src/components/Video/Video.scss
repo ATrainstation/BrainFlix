@@ -1,3 +1,6 @@
+@import "../../style/partials/1-Helpers/variables.scss";
+@import "../../style/partials/1-Helpers/mixins.scss";
+
 .next-button {
     position: absolute;
     top: 50%;
@@ -23,15 +26,22 @@
     height: auto;
     display: block;
 
+
     &__cont {
     position: relative;
     display: inline-block;
+    background-color: $black;
 
     :hover .next-button {
         opacity: 1;
        
       }
   }
+
+@media (min-width: 768px) {
+    aspect-ratio: 16/8;
+}
+
 }
   
 

@@ -9,13 +9,23 @@
         margin: 0 $spacer;
         padding: $largeSpace 0;
         justify-content: space-between;
-        width: 100%
+        width: 100%;
+
+        @media (min-width: 768px) {
+            padding-top: 0;
+            align-items: center;
+        }
     }
 
     &__author {
         @include subHeader($black);
         display: flex;
         padding-bottom: $largeSpace;
+        
+        @media (min-width: 768px) {
+            padding-bottom: 0;
+            margin-right: $largeSpace;
+    }
     }
 
     &__impressions {
@@ -26,15 +36,33 @@
         display: flex;
         width: 100%;
         align-items: center;
+        
+        @media (min-width: 768px) {
+            justify-content: flex-end;
+            width: auto;
+            margin-left: $xlargeSpace;
+            }
     }
 
     &__views {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    padding-bottom: $spacer;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding-bottom: $spacer;
 
+    @media (min-width: 768px) {
+        padding-bottom: 0;
+        justify-content: flex-end;
     }
+}
+
+    @media (min-width: 768px) {
+        &__data {
+            flex-direction: row;
+            border-top: none;
+}
+
+}
 }
 
 .video {
@@ -44,13 +72,27 @@
         flex-wrap: wrap;
         flex-direction: column;
         width: 50%;
+
+        @media (min-width: 768px) {
+           flex-direction: row;
+           align-items: center;
         }
+    }
+        
 
         &__cont__impressions {
             display: flex;
             flex-wrap: wrap;
             width: 50%;
-            
+        
+        @media (min-width: 768px) {
+                flex-direction: row;
+                flex-wrap: nowrap;
+             }
+        }
+
+        &__date {
+            color: $silver;
         }
 
         &__views, &__likes {
