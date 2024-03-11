@@ -11,7 +11,7 @@ return ( <header>
         <nav className="nav-bar">
           
           <div className="nav-bar__cont__logo">
-            <img className="nav-bar__logo" src={LogoImage} alt='BrainFlix Logo'/>
+            <a href="#"><img className="nav-bar__logo" src={LogoImage} alt='BrainFlix Logo'/></a>
           </div>
   
           <div className="nav-bar__cont__search">
