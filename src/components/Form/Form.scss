@@ -7,10 +7,17 @@
   padding-bottom: $largeSpace;
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     flex-wrap: nowrap;
+    padding: $spacer $xlargeSpace*1.5;
+  }
+
+  @media (min-width: $desktop) {
+    padding: $spacer 0;
+    padding-right: $spacer;
   }
 }
+
 
 .form {
   padding-left: $spacer;
@@ -21,9 +28,11 @@
 
     background-color: $alabaster;
     padding: 12px;
+
     margin-bottom: $largeSpace;
-    border: 1px solid $mercury;
-    border-radius: 4px;
+    border: 2px solid $mercury;
+    // Style guide says 4px but it looks more like 6px
+    border-radius: 6px;
 
     height: 8rem;
     min-height: 2.5rem;
@@ -37,8 +46,11 @@
 
     &::placeholder {
       @include bodyCopy;
+      font-family: 'Avenir';
       font-size: 1.2rem;
+      text-shadow: 0 0 1px rgba(51,51,51,0.3);
       color: $black;
+      padding-top: 4px;
     }
 
     &:focus {
@@ -52,10 +64,11 @@
         border: 2px solid $blue;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
       height: auto;
       width: auto;
     }
+
   }
 
   &__cont {
@@ -76,7 +89,7 @@
     width: 100%;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     display: flex;  
     flex-wrap: nowrap;
       flex-direction: row;

@@ -12,7 +12,12 @@
     padding-bottom: $spacer;
     min-height: 5vh;
     
-    @media (min-width: 1280px) {
+    @media (min-width: $tablet) {
+        padding: $largeSpace $xlargeSpace*1.5;
+        }
+
+    @media (min-width: $desktop) {
         padding-top: $xlargeSpace;
+        padding-left: 0;
     }
 }

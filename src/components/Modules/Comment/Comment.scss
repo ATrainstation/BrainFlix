@@ -19,7 +19,11 @@
                 justify-self: flex-end;
             } 
 
-            @media (min-width: 1280px) {
+            @media (min-width: $tablet) {
+                padding: $xlargeSpace 0;
+            }
+
+            @media (min-width: $desktop) {
                 padding-right: $spacer;
                 border-top: 2px solid $mercury;
                 border-bottom: none;
@@ -45,7 +49,7 @@
         color: $silver;
     }
 
-    @media (min-width: 1280px) {
+    @media (min-width: $desktop) {
         
     }
 }

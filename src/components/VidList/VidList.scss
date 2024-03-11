@@ -8,4 +8,12 @@
         @include subHeader($silver);
         padding: $largeSpace 0;
     }
+    
+    @media (min-width: $tablet) {
+        padding: 0 $xlargeSpace;
+      }
+
+      @media (min-width: $desktop) {
+        padding: 0 $largeSpace;
+      }
 }

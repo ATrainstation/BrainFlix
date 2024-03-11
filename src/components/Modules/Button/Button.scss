@@ -3,26 +3,42 @@
 
 .button__cont {
    width: 100%;
+ 
+   @media (min-width: $tablet) {
+   width: 160px
+  }
 }
 
 .button {
   @include button($blue);
   display: flex;
   height: 40px;
+  max-height: 40px;
   width: 100%;
   text-align: center;
+  font-weight: 600;
   align-items: center;
   justify-content: center;
-  padding: 2rem 2rem;
+  padding: 2rem 1rem;
+
+  @media (min-width: $tablet) {
+    padding: 1.75rem 1rem;
+
+  }
   
   &__text {
     width: 100%;
-    margin-right: 30px;
+    margin-right: 36px;
   }
 
   &__symbol {
     justify-self: flex-start;
-    width: 30px;
+    width: 36px;
     height: auto;
+
+    @media (min-width: $tablet) {
+      padding-right: $spacer;
+      margin-left: 0.8rem;
+    }
 }
 }

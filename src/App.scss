@@ -14,14 +14,17 @@ body {
   // Anti-aliasing text-effect
   text-shadow: 0 0 1px rgba(51,51,51,0.3);
 
+  padding-bottom: 2rem;
+
 }
 
 h1 {
-  @include pageHeader
+  @include pageHeader;
+  color: $black
 }
 
 h2 {
-  @include sectionHeader
+  @include sectionHeader;
 }
 
 h3 {
@@ -40,18 +43,13 @@ h5 {
 p {
   @include bodyCopy;
   color: $black;
-}
-
-textarea:focus {
+  @media (min-width: $desktop) {
+    @include dt-bodyCopy
+  }
   
 }
 
-textarea::placeholder {
-  font-family: 'Avenir';
-  
-}
-
-@media (min-width: 1280px) {
+@media (min-width: $desktop) {
 
 .dt-bottom__container {
   display: flex;

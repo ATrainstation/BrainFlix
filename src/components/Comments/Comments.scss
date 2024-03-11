@@ -7,6 +7,14 @@
         padding: 0 $spacer;
         padding-bottom: $spacer;
         font-weight: 600;
+
+        @media (min-width: $tablet) {
+            padding: $spacer $xlargeSpace*1.5;
+            }
+
+        @media (min-width: $desktop) {
+                padding: $spacer 0;
+            }
     }
 
     &__pfp {
@@ -24,7 +32,11 @@
         margin: 0 $spacer;
         border-top: 2px solid $mercury;
 
-        @media (min-width: 1280px) {
+        @media (min-width: $tablet) {
+            margin: 0 $xlargeSpace*1.5;
+            }
+
+        @media (min-width: $desktop) {
             margin: 0 0;
             border-top: none;
             // padding-right: $spacer;

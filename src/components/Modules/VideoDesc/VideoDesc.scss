@@ -4,5 +4,15 @@
 .video__cont__description {
     @include bodyCopy;
     padding: $spacer $spacer;
+
+    @media (min-width: $tablet) {
+        margin: 0 $xlargeSpace*1.5;
+        padding: $spacer 0;
+    }
+
+    @media (min-width: $desktop) {
+        margin: 0;
+        padding-right: $spacer;
+    }
 }
 

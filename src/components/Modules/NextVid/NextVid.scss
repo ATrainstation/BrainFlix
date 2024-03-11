@@ -2,6 +2,11 @@
 @import "../../../style/partials/1-Helpers/mixins.scss";
 
 .video-list {
+
+  @media (min-width: $desktop) {
+    padding-bottom: $largeSpace*0.7;
+  }
+
   &__thumbnail {
     height: 80px;
     width: auto;

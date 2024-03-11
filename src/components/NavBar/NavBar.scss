@@ -1,134 +1,151 @@
-@import '../../style/partials/1-Helpers/variables.scss';
+@import "../../style/partials/1-Helpers/variables.scss";
+@import "../../style/partials/1-Helpers/mixins.scss";
+
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
 
 .nav-bar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
 
-    padding: $largeSpace $largeSpace;
+  padding: $largeSpace $largeSpace;
 
-    // Container Styling
-    &__search__form {
-        flex: 1;
+  @media (min-width: $tablet) {
+    padding: $largeSpace $xlargeSpace*1.5;
     }
 
-    &__cont {
-    
+  // Container Styling
+  &__search__form {
+    flex: 1;
+  }
+
+  &__cont {
     &__logo {
-        display: flex;
-        width: 100%;
-        justify-content: center;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+
+      @media (min-width: $tablet) {
+        padding-right: 10%;
+      }
+
+      @media (min-width: $desktop) {
+        padding-right: 35%;
+      }
     }
 
     &__search {
-        flex: 1;
-        padding-right: $largeSpace;
+      flex: 1;
+      padding-right: $largeSpace;
     }
 
     &__button {
-       width: 100%;
-        }
+      width: 100%;
+    }
 
-    
     &__profile-pic {
-       display: flex;
-       align-items: center;
-       justify-content: flex-end;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
     }
-    }
+  }
 
-    // Element Styling
+  // Element Styling
 
-    &__logo {
-        height: 32px;
-        width: auto;
-        
-    }
+  &__logo {
+    height: 38px;
+    width: auto;
 
-    &__search-box {
-        height: 50px;
-        width: 100%;
-        margin: 1.5rem 0;
-        border: 1px solid $mercury;
-        border-radius: 4px;
-        
-        font-size: 1.4rem;
+    &:hover {
+      animation: wiggle 1s ease-in-out infinite;
+  }
+  }
 
-        background-color: $alabaster;
-        background-image: url('../../assets/Icons/search.svg');
-        background-size: 25px;
-        background-position: 12px 12px;
-        background-repeat: no-repeat;
-        padding: $spacer $maxSpace;
-        outline: none;
-        
+  &__search-box {
+    height: 50px;
+    width: 100%;
+    margin: 1.5rem 0;
+    border: 2px solid $mercury;
+    border-radius: 6px;
+
+    font-size: 1.4rem;
+
+    background-color: $alabaster;
+    background-image: url("../../assets/Icons/search.svg");
+    background-size: 25px;
+    background-position: 12px 12px;
+    background-repeat: no-repeat;
+    padding: $spacer $maxSpace;
+    outline: none;
+
     &:focus {
-    outline: 2px solid $blue;
+      outline: 2px solid $blue;
     }
 
     &::placeholder {
-        font-size: 1.2rem;
-        color: $black;
+      font-size: 1.2rem;
+      font-family: "Avenir";
+      color: $black;
+      text-shadow: 0 0 1px rgba(51, 51, 51, 0.3);
     }
+
+    @media (min-width: $tablet) {
+        height: 56px;
+      
+      }
+  }
 }
 
-}
-
-@media (min-width: 768px) {
-
-    .nav-bar {
+@media (min-width: $tablet) {
+  .nav-bar {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     height: 100px;
-    
 
     &__search__form {
-     
     }
 
     &__cont {
-    
-    &__logo {
-     align-items: center;
-     justify-content: flex-start;
-     width: auto;
+      &__logo {
+        align-items: center;
+        justify-content: flex-start;
+        width: auto;
+      }
+
+      &__search {
+        align-items: center;
+      }
+
+      &__profile-pic {
+        align-items: center;
+        order: +1;
+        height: 42px;
+        width: auto;
+      }
+
+      &__button {
+        margin-right: $largeSpace;
+        width: auto;
+      }
     }
 
-    &__search {
-     align-items: center;
-    }
-
-    &__profile-pic {
-    align-items: center;
-    order: +1;
-    height: 42px;
-    width: auto;
-    }
-
-    &__button {
-    margin-right: $largeSpace;
-    width: auto;
-    }
-    }
-
-
-
-    &__search-box {
-
-        
-    &:focus {
-
-    }
-
-    &::placeholder {
-
-    }
+  }
 }
-
-    }
-}
-   
