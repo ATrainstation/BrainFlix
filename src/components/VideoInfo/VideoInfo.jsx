@@ -7,9 +7,9 @@ export function VideoInfo({ selectedVideo }) {
   return (
     <>
       <section className="video__cont__info">
-        <HeaderText />
+        <HeaderText video={selectedVideo} />
         <VideoData video={selectedVideo} />
-        <VideoDesc selectedVideo={selectedVideo}/>
+        <VideoDesc video={selectedVideo} />
       </section>
     </>
   );

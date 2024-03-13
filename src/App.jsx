@@ -1,47 +1,59 @@
+
 import "./App.scss";
 import "./components/VidList/VidList.scss"
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { NavBar } from "./components/NavBar/NavBar";
-import { Video } from "./components/Video/Video";
-import videoList from "./Data/videos.json";
-import videoDetails from "./Data/video-details.json";
-import userPic from "/src/assets/Images/Mohan-muruge.jpg"
-import { VideoInfo } from "./components/VideoInfo/VideoInfo";
-import { Form } from "./components/Form/Form"
-import { Comments } from "./components/Comments/Comments";
-import { VidList } from "./components/VidList/VidList";
+import { VideoPage } from "./Pages/VideoPage/VideoPage";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Upload } from "./Pages/Upload/Upload";
+
+const apiKey= "d5f7af9d-5c2e-4325-bdc1-c33027164785"
+const apiUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com/"
 
 export function App() {
-  const [selectedVideo, setSelectedVideo] = useState(videoDetails[0]);
+  const [videoList, setVideoList] = useState([])
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
-  function getVideoFromId(id) {
-    const foundId = videoDetails.find((aspect) => aspect.id === id);
-    setSelectedVideo(foundId);
-
-  }
+  useEffect(() => {
+    const getVideos = async () => {
+      const getResponse = await axios.get(
+        `${apiUrl}videos?api_key=${apiKey}`
+      )
+      setVideoList(getResponse.data);
+      setSelectedVideo(getResponse.data[0])
+    };
+    getVideos();
+  }, []); 
 
   return (
     <>
-      <NavBar />
-      <main>
-        <Video videoList={videoList} selectedVideo={selectedVideo}/>
-      
+    <BrowserRouter>
+    <NavBar />
+    <Routes>
+        
+          <Route
+            path="/"
+            element={<VideoPage 
+              videoList={videoList} selectedVideo={selectedVideo} 
+              setSelectedVideo={setSelectedVideo}/>}
+          />
+          <Route
+            path="/videos/:videoId"
+            element={<VideoPage videoList={videoList} selectedVideo={selectedVideo} 
+            setSelectedVideo={setSelectedVideo}
+            />}
+          />
+       <Route
+          path="/upload"
+          element={<Upload />}/>
+   
+        </Routes>
+    </BrowserRouter>
 
-      <section className="dt-bottom__container">
-        <div className="dt-bottom__main">
-          <VideoInfo selectedVideo={selectedVideo}  />
-          <Form />
-          <Comments videoComments={selectedVideo.comments}/>
-        </div>
-  
-        <aside className="dt-bottom__side-list">
-          <VidList videosList={videoDetails.filter((video) => video.id !== selectedVideo.id)}
-              selectedVideo={getVideoFromId} />
-        </aside>
-  
-      </section>
-      </main>
+
+      
     </>
   );
 }

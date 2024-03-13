@@ -1,9 +1,9 @@
 import "./HeaderText.scss";
 
-export function HeaderText() {
+export function HeaderText({video}) {
   return (
     <div className="video__cont__title">
-      <h1 className="video__title">The Future of Artificial Intelligence</h1>
+      <h1 className="video__title">{video.title}</h1>
     </div>
   );
 }

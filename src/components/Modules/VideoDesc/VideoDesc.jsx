@@ -1,8 +1,8 @@
 import "./VideoDesc.scss";
 import "../../Comments/Comments.scss"
 
-export function VideoDesc({ selectedVideo }) {
-  const {description, comments} = selectedVideo
+export function VideoDesc({ video }) {
+  const {description, comments} = video
   
     return (
      <>

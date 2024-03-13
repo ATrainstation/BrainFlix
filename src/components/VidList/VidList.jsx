@@ -1,8 +1,12 @@
 import "./VidList.scss"
 import { NextVid } from "../Modules/NextVid/NextVid";
+import { Link, useParams } from "react-router-dom";
 
 
-export function VidList({videosList, selectedVideo}) {
+
+
+export function VidList({videoList, selectedVideo}) {
+  const { id } = useParams();
 
     return (
     <>
@@ -11,10 +15,7 @@ export function VidList({videosList, selectedVideo}) {
           <h4 className="next-videos__title">NEXT VIDEOS</h4>
         </div>
         
-        {videosList.map((nextVideo) => (
-        <NextVid key={nextVideo.id} image={nextVideo.image} title={nextVideo.title} channel={nextVideo.channel} chosenVideo={selectedVideo} nextVideo={nextVideo}/>
-
-        ))}
+        {videoList.map((nextVideo) => (<NextVid key={nextVideo.id} changeVideo={selectedVideo} nextVideo={nextVideo}/>))}
         </section>
     </>
 

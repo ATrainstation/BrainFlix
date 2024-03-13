@@ -1,9 +1,9 @@
 import "./Video.scss";
 import nextButton from '../../assets/Icons/next.png'
 
-export function Video({selectedVideo}) {
+export function Video({videoDetails}) {
   
-  const { image } = selectedVideo;
+  const { image } = videoDetails;
 
   return (
     <>
