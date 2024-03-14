@@ -8,11 +8,12 @@
         padding-bottom: $spacer;
         font-weight: 600;
 
-        @media (min-width: $tablet) {
+        @include tablet {
+  
             padding: $spacer $xlargeSpace*1.5;
             }
 
-        @media (min-width: $desktop) {
+        @include desktop {
                 padding: $spacer 0;
             }
     }
@@ -32,11 +33,12 @@
         margin: 0 $spacer;
         border-top: 2px solid $mercury;
 
-        @media (min-width: $tablet) {
+        @include tablet {
+  
             margin: 0 $xlargeSpace*1.5;
             }
 
-        @media (min-width: $desktop) {
+        @include desktop {
             margin: 0 0;
             border-top: none;
             // padding-right: $spacer;

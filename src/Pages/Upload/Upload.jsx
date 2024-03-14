@@ -2,35 +2,40 @@ import './Upload.scss'
 import React from 'react'
 import uploadThumbnail from '../../assets/Images/Upload-video-preview.jpg'
 import { Button } from '../../components/Modules/Button/Button'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 export function Upload() {
   return (
     <>
-        <div>
+        <div className='upload__title'>
             <h1>Upload Video</h1>
         </div>
     
-        <h4>
-            VIDEO THUMBNAIL
-        </h4>
-
-        <div>
-            <img src={uploadThumbnail} alt='video thumbnail'/>  
+        <div className='upload__left'>
+        <div className="upload__thumbnail__label">
+            <h4>
+                VIDEO THUMBNAIL
+            </h4>
         </div>
 
+        <div className="upload__thumbnail__cont">
+            <img className="upload__thumbnail" src={uploadThumbnail} alt='video thumbnail'/>  
+        </div>
+        </div>
+
+        <div className='upload__right'>
         <article className='upload-form__cont'>
             <form className='upload-form'>
                 <div className='upload-form__title-input__cont'>
                     <label className='upload-form__title__label'>TITLE YOUR VIDEO
-                    <input className='upload-form__title__input'></input>
+                    <input className='upload-form__title__input' placeholder='Add a title to your video'></input>
                     </label>
                 </div>
 
                 <div className='upload-form__desc__cont'>
-                    <label className='upload-form__desc__label'>TITLE YOUR VIDEO
-                    <input className='upload-form__desc__input'></input>
+                    <label className='upload-form__desc__label'>ADD A VIDEO DESCRIPTION
+                    <textarea className='upload-form__desc__input' placeholder='Add a description to your video'></textarea>
                     </label>
                 </div>
 
@@ -39,16 +44,19 @@ export function Upload() {
                 </div>
 
             </form>
+            </article>
+            </div>
 
-            <NavLink 
-            to="/">
-                <h2 className='upload__cancel'>CANCEL</h2>
-            </NavLink>
+            <div className='upload__cancel__cont'>
+                <NavLink 
+                to="/">
+                    <h4 className='upload__cancel'>CANCEL</h4>
+                </NavLink>
             
-        </article>
+                </div>
+       
             
     </>
   )
 }
-
 export default Upload

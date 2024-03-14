@@ -7,12 +7,13 @@
   padding-bottom: $largeSpace;
   width: 100%;
 
-  @media (min-width: $tablet) {
+  @include tablet {
+  
     flex-wrap: nowrap;
     padding: $spacer $xlargeSpace*1.5;
   }
 
-  @media (min-width: $desktop) {
+  @include desktop {
     padding: $spacer 0;
     padding-right: $spacer;
   }
@@ -64,7 +65,8 @@
         border: 2px solid $blue;
     }
 
-    @media (min-width: $tablet) {
+    @include tablet {
+  
       height: auto;
       width: auto;
     }
@@ -89,7 +91,8 @@
     width: 100%;
   }
 
-  @media (min-width: $tablet) {
+  @include tablet {
+  
     display: flex;  
     flex-wrap: nowrap;
       flex-direction: row;

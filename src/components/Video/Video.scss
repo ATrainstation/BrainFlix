@@ -16,11 +16,12 @@
     background-color: $darkblk;
   }
 
-@media (min-width: $tablet) {
+@include tablet {
+  
     aspect-ratio: 16/8;
 }
 
-@media (min-width: $desktop) {
+@include desktop {
     aspect-ratio: 16/6;
 }
 

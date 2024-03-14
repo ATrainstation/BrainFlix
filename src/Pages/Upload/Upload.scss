@@ -1,3 +1,130 @@
+@import "../../style/partials/1-Helpers/variables.scss";
+@import "../../style/partials/1-Helpers/mixins.scss";
+
 * {
     text-decoration: none;
 }
+
+.upload {
+
+    &__title {
+        color: $black;
+
+        padding: $largeSpace $spacer;
+        border-top: 2px solid $mercury;
+        border-bottom: 2px solid $mercury;
+        margin-bottom: $largeSpace;
+
+        @include tablet {
+            @include dt-pageHeader;
+        }
+    }
+
+    &__thumbnail {
+        padding-bottom: $largeSpace;
+        width: 100%;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        aspect-ratio: 16/10;
+
+        &__label {
+            padding: 0 $spacer;
+            padding-bottom: 4px;
+        }
+    
+    &__cont {
+        width: 100%;
+        padding: 0 $spacer;
+    }   
+}
+
+    &__cancel {
+        color: $blue;
+        text-align: center;
+
+        &__cont {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: $largeSpace*2;
+        }
+    }
+}
+    .upload-form {
+        &__cont {
+            padding: 0 $spacer;
+        }
+
+        &__title__label, &__desc__label {
+            @include subHeader2($silver);
+            font-size: 1rem;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-bottom: 4px;
+              }
+        
+        &__title__input {
+            height: 50px;
+            width: 100%;
+            background-color: $alabaster;
+            border: 2px solid $mercury;
+            border-radius: 6px;
+            font-size: 1.4rem;
+
+            margin-bottom: $largeSpace;
+
+            &::placeholder {
+                @include bodyCopy;
+                font-family: 'Avenir';
+                font-size: 1.1rem;
+                text-shadow: 0 0 1px rgba(51,51,51,0.3);
+                color: $black;
+                padding-left: 12px;
+              }
+          
+              &:focus {
+                  outline: 0;
+                  outline-color: transparent;
+                  outline-style: none;
+                  outline: 2px solid $blue;
+                }
+        }
+
+        &__desc__input{
+            resize: none;
+            height: 7rem;
+            width: 100%;
+            background-color: $alabaster;
+            border: 2px solid $mercury;
+            border-radius: 6px;
+            font-size: 1.4rem;
+
+            margin-bottom: $largeSpace;
+
+            &::placeholder {
+                @include bodyCopy;
+                font-family: 'Avenir';
+                font-size: 1.1rem;
+                text-shadow: 0 0 1px rgba(51,51,51,0.3);
+                color: $black;
+                padding-top: 12px;
+                padding-left: 12px;
+              }
+          
+              &:focus {
+                  outline: 0;
+                  outline-color: transparent;
+                  outline-style: none;
+                  outline: 2px solid $blue;
+                }
+        }
+
+        &__button {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+}
+    

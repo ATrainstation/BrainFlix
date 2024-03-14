@@ -11,13 +11,14 @@
         justify-content: space-between;
         width: 100%;
 
-        @media (min-width: $tablet) {
+        @include tablet {
+  
             padding-top: 0;
             margin: 0 $xlargeSpace*1.5;
             align-items: center;
         }
 
-        @media (min-width: $desktop) {
+        @include desktop {
             padding: $largeSpace $spacer;
             padding-left: 0;
             margin: 0 0;
@@ -29,7 +30,8 @@
         display: flex;
         padding-bottom: $largeSpace;
         
-        @media (min-width: $tablet) {
+        @include tablet {
+  
             padding-bottom: 0;
             margin-right: $largeSpace;
     }
@@ -44,7 +46,8 @@
         width: 100%;
         align-items: center;
         
-        @media (min-width: $tablet) {
+        @include tablet {
+  
             justify-content: flex-end;
             width: auto;
             margin-left: $xlargeSpace;
@@ -57,13 +60,15 @@
         align-items: center;
         padding-bottom: $spacer;
 
-    @media (min-width: $tablet) {
+    @include tablet {
+  
         padding-bottom: 0;
         justify-content: flex-end;
     }
 }
 
-    @media (min-width: $tablet) {
+    @include tablet {
+  
         &__data {
             flex-direction: row;
             border-top: none;
@@ -80,7 +85,8 @@
         flex-direction: column;
         width: 50%;
 
-        @media (min-width: $tablet) {
+        @include tablet {
+  
            flex-direction: row;
            align-items: center;
         }
@@ -92,7 +98,8 @@
             flex-wrap: wrap;
             width: 50%;
         
-        @media (min-width: $tablet) {
+        @include tablet {
+  
                 flex-direction: row;
                 flex-wrap: nowrap;
              }

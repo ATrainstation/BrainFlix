@@ -20,11 +20,12 @@
                 justify-self: flex-end;
             } 
 
-            @media (min-width: $tablet) {
+            @include tablet {
+  
                 padding: $xlargeSpace 0;
             }
 
-            @media (min-width: $desktop) {
+            @include desktop {
                 padding-right: $spacer;
                 border-top: 2px solid $mercury;
                 border-bottom: none;
@@ -55,7 +56,7 @@
         color: $silver;
     }
 
-    @media (min-width: $desktop) {
+    @include desktop {
         
     }
 }

@@ -9,11 +9,12 @@
         padding: $largeSpace 0;
     }
     
-    @media (min-width: $tablet) {
+    @include tablet {
+  
         padding: 0 $xlargeSpace;
       }
 
-      @media (min-width: $desktop) {
+      @include desktop {
         padding: 0 $largeSpace;
       }
 }

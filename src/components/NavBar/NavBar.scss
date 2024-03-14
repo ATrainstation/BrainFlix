@@ -27,7 +27,8 @@
 
   padding: $largeSpace $largeSpace;
 
-  @media (min-width: $tablet) {
+  @include tablet {
+  
     padding: $largeSpace $xlargeSpace*1.5;
     }
 
@@ -42,11 +43,12 @@
       width: 100%;
       justify-content: center;
 
-      @media (min-width: $tablet) {
+      @include tablet {
+  
         padding-right: 10%;
       }
 
-      @media (min-width: $desktop) {
+      @include desktop {
         padding-right: 35%;
       }
     }
@@ -106,14 +108,16 @@
       text-shadow: 0 0 1px rgba(51, 51, 51, 0.3);
     }
 
-    @media (min-width: $tablet) {
+    @include tablet {
+  
         height: 56px;
       
       }
   }
 }
 
-@media (min-width: $tablet) {
+@include tablet {
+  
   .nav-bar {
     flex-direction: row;
     flex-wrap: nowrap;
