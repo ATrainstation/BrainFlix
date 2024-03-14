@@ -6,25 +6,25 @@
  
    @include tablet {
   
-   width: 160px
+   max-width: 180px
   }
 }
 
 .button {
   @include button($blue);
   display: flex;
-  height: 40px;
-  max-height: 40px;
+  height: 34px;
+  max-height: 34px;
   width: 100%;
   text-align: center;
   font-weight: 600;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
 
   @include tablet {
   
-    padding: 1.75rem 1rem;
+    padding: 1.5rem 1rem;
 
   }
   

@@ -24,7 +24,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-content: space-between;
-
+  border-bottom: 2px solid $mercury;
   padding: $largeSpace $largeSpace;
 
   @include tablet {
@@ -72,7 +72,7 @@
   // Element Styling
 
   &__logo {
-    height: 38px;
+    height: 32px;
     width: auto;
 
     &:hover {
@@ -109,9 +109,7 @@
     }
 
     @include tablet {
-  
-        height: 56px;
-      
+        height: 48px;
       }
   }
 }

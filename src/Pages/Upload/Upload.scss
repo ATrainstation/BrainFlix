@@ -6,17 +6,46 @@
 }
 
 .upload {
+    &__content {
+        
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+        }
+        @include desktop {
+            flex-direction: row;
+            border-bottom: 2px solid $mercury;
+            margin: 0 $xlargeSpace*3;
+            
+        }
+    }
+
+    &__left {
+        @include desktop {
+            width: 50%;
+        }
+    }
+    &__right {
+        @include desktop {
+            width: 75%;
+        }
+    }
 
     &__title {
         color: $black;
 
         padding: $largeSpace $spacer;
-        border-top: 2px solid $mercury;
+    
         border-bottom: 2px solid $mercury;
         margin-bottom: $largeSpace;
 
         @include tablet {
             @include dt-pageHeader;
+        }
+        
+        @include desktop {
+        margin: $largeSpace $xlargeSpace*3;
+        padding: $largeSpace 0;
         }
     }
 
@@ -27,6 +56,14 @@
         justify-content: center; 
         align-items: center; 
         aspect-ratio: 16/10;
+        
+        @include tablet {
+        width: 50%;
+        }
+        
+        @include desktop {
+            width: 100%;
+        }
 
         &__label {
             padding: 0 $spacer;
@@ -36,24 +73,54 @@
     &__cont {
         width: 100%;
         padding: 0 $spacer;
+        
+        @include desktop {
+            padding-left: 0;
+        }
     }   
+
+}
+
+&__bottom {
+    @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding-top: $largeSpace;
+    }
 }
 
     &__cancel {
         color: $blue;
         text-align: center;
+        
+        @include desktop {
+            text-align: right;    
+        }
 
         &__cont {
             display: flex;
             justify-content: center;
             width: 100%;
             margin-top: $largeSpace*2;
+
+            @include desktop {
+                margin-top: 0;
+                order: -1;
+                justify-content: flex-end;
+            }
         }
     }
 }
     .upload-form {
         &__cont {
             padding: 0 $spacer;
+
+            @include desktop {
+            padding-right: 0;
+            }
         }
 
         &__title__label, &__desc__label {
@@ -62,7 +129,7 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            padding-bottom: 4px;
+            padding-top: $smallSpace;
               }
         
         &__title__input {
@@ -74,6 +141,10 @@
             font-size: 1.4rem;
 
             margin-bottom: $largeSpace;
+
+            @include desktop {
+                height: 3.5rem;
+            }
 
             &::placeholder {
                 @include bodyCopy;
@@ -103,6 +174,10 @@
 
             margin-bottom: $largeSpace;
 
+            @include desktop {
+                height: 7.8rem;
+            }
+
             &::placeholder {
                 @include bodyCopy;
                 font-family: 'Avenir';
@@ -125,6 +200,14 @@
             display: flex;
             width: 100%;
             justify-content: center;
+            @include tablet {
+                width: 100%;
+            }
+            @include desktop {
+                width: 20%;
+                justify-content: right;
+                margin-right: $xlargeSpace*3;
+            }
         }
 }
     
