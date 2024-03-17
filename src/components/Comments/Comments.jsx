@@ -10,9 +10,11 @@ const apiUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com/"
 export function Comments({videoComments}) {
   
   
+ videoComments.sort((a, b) => b.timestamp - a.timestamp);
+
   return (
     <>
-      <Form />
+      
       <section className="comments__cont">
         
         {videoComments.map((oneComment) => (

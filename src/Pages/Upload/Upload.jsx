@@ -1,10 +1,27 @@
 import "./Upload.scss";
 import React from "react";
+import { useState } from "react";
 import uploadThumbnail from "../../assets/Images/Upload-video-preview.jpg";
-import { Button } from "../../components/Modules/Button/Button";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export function Upload() {
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
+  const navigate = useNavigate();
+
+  const uploadHandler = (e) => {
+    console.log("upload handlin)");
+    if (!title || !desc) {
+      alert("Form is not valid!");
+      return;
+    }
+
+    if (title && desc) {
+      alert("Form submitted!");
+    }
+    navigate("/");
+  };
+
   return (
     <>
       <div className="upload__title">
@@ -27,44 +44,57 @@ export function Upload() {
         </div>
 
         <div className="upload__right">
-          <article className="upload-form__cont">
-            <form className="upload-form">
-              <div className="upload-form__title-input__cont">
-                <label className="upload-form__title__label">
-                  TITLE YOUR VIDEO
-                  <input
-                    className="upload-form__title__input"
-                    placeholder="Add a title to your video"
-                  ></input>
-                </label>
-              </div>
+          <form
+            id="uploadForm"
+            onSubmit={uploadHandler}
+            className="upload-form"
+          >
+            <div className="upload-form__title-input__cont">
+              <label className="upload-form__title__label">
+                TITLE YOUR VIDEO
+                <input
+                  className="upload-form__title__input"
+                  placeholder="Add a title to your video"
+                  onChange={(e) => {
+                    setTitle(e.target.value);
+                  }}
+                  value={title}
+                ></input>
+              </label>
+            </div>
 
-              <div className="upload-form__desc__cont">
-                <label className="upload-form__desc__label">
-                  ADD A VIDEO DESCRIPTION
-                  <textarea
-                    className="upload-form__desc__input"
-                    placeholder="Add a description to your video"
-                  ></textarea>
-                </label>
-              </div>
-            </form>
-          </article>
-          </div>
+            <div className="upload-form__desc__cont">
+              <label className="upload-form__desc__label">
+                ADD A VIDEO DESCRIPTION
+                <textarea
+                  className="upload-form__desc__input"
+                  placeholder="Add a description to your video"
+                  value={desc}
+                  onChange={(e) => {
+                    setDesc(e.target.value);
+                  }}
+                ></textarea>
+              </label>
+            </div>
+          </form>
+        </div>
       </main>
 
-          <div className="upload__bottom">
-            <div className="upload-form__button">
-              <Button />
-            </div>
+      <div className="upload__bottom">
+          <button
+            form="uploadForm"
+            type="submit"
+            className={`button button--symbol__${name} upload-form__button`}
+          >
+            <span className="upload-form__button__text">UPLOAD</span>
+          </button>
 
-            <div className="upload__cancel__cont">
-              <NavLink to="/">
-                <h4 className="upload__cancel">CANCEL</h4>
-              </NavLink>
-            </div>
-          </div>
-        
+        <div className="upload__cancel__cont">
+          <NavLink to="/">
+            <h4 className="upload__cancel">CANCEL</h4>
+          </NavLink>
+        </div>
+      </div>
     </>
   );
 }

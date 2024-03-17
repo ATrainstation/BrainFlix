@@ -200,14 +200,20 @@
             display: flex;
             width: 100%;
             justify-content: center;
+            
             @include tablet {
                 width: 100%;
             }
             @include desktop {
-                width: 20%;
-                justify-content: right;
-                margin-right: $xlargeSpace*3;
+                width: 15%;
+                margin: 0 $xlargeSpace*3;
+                
             }
+
+        &__text {
+            margin: 0;
+            
+        }
         }
 }
     

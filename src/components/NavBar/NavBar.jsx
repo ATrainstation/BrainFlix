@@ -4,7 +4,7 @@ import { ProfilePic } from '../Modules/ProfilePic/ProfilePic';
 import { Button } from '../Modules/Button/Button';
 import { NavLink } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import Upload from '../../Pages/Upload/Upload';
+import { Upload } from '../../Pages/Upload/Upload';
 
 export function NavBar() {
 

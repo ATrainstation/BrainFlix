@@ -19,6 +19,7 @@
 
     @include desktop {
         padding-top: $xlargeSpace;
+        padding-bottom: 0;
         padding-left: 0;
     }
 }
