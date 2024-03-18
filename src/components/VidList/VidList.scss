@@ -10,11 +10,11 @@
     }
     
     @include tablet {
-  
         padding: 0 $xlargeSpace;
       }
 
       @include desktop {
-        padding: 0 $largeSpace;
+        padding-right: 0;
+        padding-left: $largeSpace;
       }
 }

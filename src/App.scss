@@ -48,23 +48,3 @@ p {
   }
   
 }
-
-@include desktop {
-
-.dt-bottom__container {
-  display: flex;
-  padding: 0 $maxSpace*2;
-  
-}
-
-.dt-bottom__main {
-  
-}
-
-.dt-bottom__side-list {
-  min-width: 40%;
-  border-left: 2px solid $mercury;
-  padding-top: $spacer;
-}
-
-}

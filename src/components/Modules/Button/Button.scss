@@ -1,33 +1,21 @@
 @import '../../../style/partials/1-Helpers/variables.scss';
 @import '../../../style/partials/1-Helpers/mixins.scss';
 
-.button__cont {
-   width: 100%;
- 
-   @include tablet {
-   max-width: 180px
-  }
-}
-
 .button {
   @include button($blue);
   display: flex;
-  height: 34px;
-  max-height: 34px;
+  height: 56px;
+  // max-height: 58px;
   width: 100%;
   text-align: center;
   font-weight: 600;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 3rem;
+  text-transform: uppercase;
 
   @include tablet {
-    padding: 1.5rem 1rem;
-  }
-  
-  &__text {
-    width: 100%;
-    margin-right: 36px;
+    padding: 1.5rem 3rem;
   }
 
   &__symbol {
@@ -39,6 +27,25 @@
   
       padding-right: $spacer;
       margin-left: 0.8rem;
+    }
+
+    &__upload{
+      background-image: url('../../../assets/Icons/upload.svg');
+      background-repeat: no-repeat;
+      background-position: 0.8rem;
+
+    }
+
+    &__comment {
+      background-image: url('../../../assets/Icons/add_comment.svg');
+      background-repeat: no-repeat;
+      background-position: 0.8rem;
+    }
+
+    &__publish{
+      background-image: url('../../../assets/Icons/publish.svg');
+      background-repeat: no-repeat;
+      background-position: 0.8rem;
     }
 }
 }

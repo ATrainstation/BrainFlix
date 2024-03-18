@@ -11,7 +11,9 @@
         @include tablet {
             display: flex;
             flex-direction: column;
+            margin: $largeSpace*2;
         }
+
         @include desktop {
             flex-direction: row;
             border-bottom: 2px solid $mercury;
@@ -41,6 +43,7 @@
 
         @include tablet {
             @include dt-pageHeader;
+            padding: $largeSpace $largeSpace*2;
         }
         
         @include desktop {
@@ -50,7 +53,9 @@
     }
 
     &__thumbnail {
+        padding: 0 $largeSpace;
         padding-bottom: $largeSpace;
+        
         width: 100%;
         display: flex; 
         justify-content: center; 
@@ -63,16 +68,26 @@
         
         @include desktop {
             width: 100%;
+            padding: 0 0;
         }
 
         &__label {
-            padding: 0 $spacer;
+
+            padding: 0 $largeSpace;
             padding-bottom: 4px;
+
+            @include tablet {
+                width: 50%;
+                }
+                
+                @include desktop {
+                    padding: 0 0.2rem;
+                    width: 100%;
+                }
         }
     
     &__cont {
         width: 100%;
-        padding: 0 $spacer;
         
         @include desktop {
             padding-left: 0;
@@ -82,6 +97,13 @@
 }
 
 &__bottom {
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        align-items: center;
+    }
+
     @include desktop {
     display: flex;
     flex-direction: row;
@@ -94,7 +116,10 @@
 
     &__cancel {
         color: $blue;
-        text-align: center;
+        display: flex;
+        align-items: center;
+
+        
         
         @include desktop {
             text-align: right;    
@@ -106,6 +131,12 @@
             width: 100%;
             margin-top: $largeSpace*2;
 
+            @include tablet {
+                width: 20%;
+                order: -2;
+                margin-top: 0;    
+            }
+
             @include desktop {
                 margin-top: 0;
                 order: -1;
@@ -115,6 +146,8 @@
     }
 }
     .upload-form {
+        padding: 0 $largeSpace; 
+
         &__cont {
             padding: 0 $spacer;
 
@@ -198,16 +231,18 @@
 
         &__button {
             display: flex;
-            width: 100%;
             justify-content: center;
+            margin: 0 $largeSpace;
             
             @include tablet {
-                width: 100%;
+                width: 20%;
+                margin: 0 $largeSpace*2;
+                justify-content: flex-end;
             }
+
             @include desktop {
                 width: 15%;
                 margin: 0 $xlargeSpace*3;
-                
             }
 
         &__text {

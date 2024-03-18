@@ -11,8 +11,8 @@ export function NextVid({ nextVideo }) {
               <img
                 src={`${nextVideo.image}`}
                 className="video-list__thumbnail"
+                alt={`Thumbnail for ${nextVideo.title}`}
               />
-              {/* Maybe insert image or use background-image?   */}
             </div>
           </div>
           <div className="video-list__cont__info">

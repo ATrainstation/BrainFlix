@@ -3,11 +3,10 @@ import LogoImage from '../../assets/Logo/BrainFlix-logo.svg';
 import { ProfilePic } from '../Modules/ProfilePic/ProfilePic';
 import { Button } from '../Modules/Button/Button';
 import { NavLink } from "react-router-dom";
-import { Link } from 'react-router-dom';
-import { Upload } from '../../Pages/Upload/Upload';
+
+const name ="upload"
 
 export function NavBar() {
-
 return ( <header>
       
         <nav className="nav-bar">
@@ -28,7 +27,7 @@ return ( <header>
 
           <div className='nav-bar__cont__button'>
             <NavLink to='/Upload'>
-              <Button isUpload={true}/>
+              <Button name={name} />
               </NavLink>
             </div>
           

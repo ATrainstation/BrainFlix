@@ -3,21 +3,21 @@ import React from "react";
 import { useState } from "react";
 import uploadThumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import { NavLink, useNavigate } from "react-router-dom";
+import { Button } from "../../components/Modules/Button/Button";
 
 export function Upload() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const navigate = useNavigate();
 
-  const uploadHandler = (e) => {
-    console.log("upload handlin)");
+  const uploadHandler = () => {
     if (!title || !desc) {
-      alert("Form is not valid!");
+      alert("Form is invalid! Please fill in the fields.");
       return;
     }
 
     if (title && desc) {
-      alert("Form submitted!");
+      alert("Your video is uploading!");
     }
     navigate("/");
   };
@@ -81,13 +81,12 @@ export function Upload() {
       </main>
 
       <div className="upload__bottom">
-          <button
-            form="uploadForm"
-            type="submit"
-            className={`button button--symbol__${name} upload-form__button`}
-          >
-            <span className="upload-form__button__text">UPLOAD</span>
-          </button>
+   
+           <div className="upload-form__button">
+            <Button name="publish" clickHandle={uploadHandler}/>
+            </div>
+          
+
 
         <div className="upload__cancel__cont">
           <NavLink to="/">

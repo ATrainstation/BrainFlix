@@ -1,3 +1,4 @@
+import "./VideoPage.scss"
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -7,12 +8,11 @@ import { Comments } from "../../components/Comments/Comments";
 import { VidList } from "../../components/VidList/VidList";
 import { Form } from "../../components/Form/Form";
 import { useParams } from "react-router-dom";
-// import userPic from "/src/assets/Images/Mohan-muruge.jpg"
 
 const apiKey = "d5f7af9d-5c2e-4325-bdc1-c33027164785";
 const apiUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
 
-export function VideoPage({ videoList}) {
+export function VideoPage({ videoList }) {
   const [videoDetails, setVideoDetails] = useState(null);
 
   const { videoId } = useParams();

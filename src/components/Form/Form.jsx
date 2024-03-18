@@ -1,6 +1,6 @@
 import "./Form.scss";
 import axios from "axios";
-import { useId, useState } from "react";
+import { useState } from "react";
 import { Button } from "../Modules/Button/Button";
 import { ProfilePic } from "../Modules/ProfilePic/ProfilePic";
 const apiKey= "d5f7af9d-5c2e-4325-bdc1-c33027164785"
@@ -54,7 +54,7 @@ export function Form({selectedVideo, getVideoDetails, videoDetails}) {
                                 </label>
                             
                         <div className="form__cont__button">
-                            <Button isUpload={false}/>
+                            <Button name="comment"/>
                             </div>
     
                         </form>

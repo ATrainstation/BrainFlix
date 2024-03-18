@@ -32,6 +32,10 @@
     padding: $largeSpace $xlargeSpace*1.5;
     }
 
+  @include desktop {
+    padding: $largeSpace $xlargeSpace*4;
+  }
+
   // Container Styling
   &__search__form {
     flex: 1;
@@ -109,7 +113,7 @@
     }
 
     @include tablet {
-        height: 48px;
+        height: 58px;
       }
   }
 }
