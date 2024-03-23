@@ -73,6 +73,5 @@ const BrainFlixApi = (apiKey) => {
     };
   };
   
-  // Example usage:
-  const bandSiteApi = BandSiteApi("yourApiKey");
+
   
