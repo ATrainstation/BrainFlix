@@ -1,5 +1,6 @@
 import "./Upload.scss";
 import React from "react";
+import axios from "axios";
 import { useState } from "react";
 import uploadThumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -10,17 +11,26 @@ export function Upload() {
   const [desc, setDesc] = useState("");
   const navigate = useNavigate();
 
-  const uploadHandler = () => {
+  const uploadHandler = (e) => {
+    e.preventDefault();
+  
     if (!title || !desc) {
       alert("Form is invalid! Please fill in the fields.");
       return;
     }
-
-    if (title && desc) {
-      alert("Your video is uploading!");
-    }
+  
+    axios.post(`${apiUrl}/videos`, { title,
+    description: desc,
+  })
+  .then((response) => {
+    alert("Your video is uploading!");
     navigate("/");
-  };
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    alert("There was an error uploading the video.");
+  });
+};
 
   return (
     <>
