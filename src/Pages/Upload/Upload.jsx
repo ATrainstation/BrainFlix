@@ -14,24 +14,23 @@ export function Upload() {
 
   const uploadHandler = (e) => {
     e.preventDefault();
-  
+
     if (!title || !desc) {
       alert("Form is invalid! Please fill in the fields.");
       return;
     }
-  
-    axios.post(`${apiUrl}/videos`, { title,
-    description: desc,
-  })
-  .then((response) => {
-    alert("Your video is uploading!");
-    navigate("/");
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-    alert("There was an error uploading the video.");
-  });
-};
+
+    axios
+      .post(`${apiUrl}/videos`, { title, description: desc })
+      .then((response) => {
+        alert("Your video is uploading!");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("There was an error uploading the video.");
+      });
+  };
 
   return (
     <>
@@ -92,12 +91,9 @@ export function Upload() {
       </main>
 
       <div className="upload__bottom">
-   
-           <div className="upload-form__button">
-            <Button name="publish" clickHandle={uploadHandler}/>
-            </div>
-          
-
+        <div className="upload-form__button">
+          <Button name="publish" clickHandle={uploadHandler} />
+        </div>
 
         <div className="upload__cancel__cont">
           <NavLink to="/">

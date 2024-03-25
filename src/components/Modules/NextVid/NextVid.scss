@@ -2,9 +2,8 @@
 @import "../../../assets/styles/partials/1-Helpers/mixins.scss";
 
 .video-list {
-
   @include desktop {
-    padding-bottom: $largeSpace*0.7;
+    padding-bottom: $largeSpace * 0.7;
   }
 
   &__thumbnail {
@@ -21,15 +20,12 @@
     @include bodyCopy;
   }
 
-  
   :hover {
     cursor: pointer;
   }
- 
 
-//   Containers
+  //   Containers
   &__cont {
-    
     &__thumbnail {
       :hover {
         cursor: pointer;
@@ -43,9 +39,6 @@
       display: flex;
       width: 100%;
       padding-bottom: $spacer;
-
-      
-      
     }
 
     &__info {
@@ -54,12 +47,11 @@
       justify-content: space-between;
       margin-left: $spacer;
       padding: $minSpace 0;
-
     }
 
     &__title {
       display: flex;
-      // flex-wrap: wrap;
+
       :hover {
         transform: none;
       }

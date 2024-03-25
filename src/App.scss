@@ -1,6 +1,6 @@
 @import "./assets/styles/partials/1-Helpers/variables.scss";
 @import "./assets/styles/partials/1-Helpers/mixins.scss";
-@import './components/Form/Form.scss';
+@import "./components/Form/Form.scss";
 
 * {
   margin: 0;
@@ -9,18 +9,16 @@
 }
 
 body {
-  font-family: 'Avenir', sans-serif;
-  
+  font-family: "Avenir", sans-serif;
+
   // Anti-aliasing text-effect
-  text-shadow: 0 0 1px rgba(51,51,51,0.3);
-
+  text-shadow: 0 0 1px rgba(51, 51, 51, 0.3);
   padding-bottom: 2rem;
-
 }
 
 h1 {
   @include pageHeader;
-  color: $black
+  color: $black;
 }
 
 h2 {
@@ -37,14 +35,12 @@ h4 {
 }
 
 h5 {
-
 }
 
 p {
   @include bodyCopy;
   color: $black;
   @include desktop {
-    @include dt-bodyCopy
+    @include dt-bodyCopy;
   }
-  
 }

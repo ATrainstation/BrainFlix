@@ -1,54 +1,23 @@
 @import "../../assets/styles/partials/1-Helpers/variables.scss";
 @import "../../assets/styles/partials/1-Helpers/mixins.scss";
 
-
 .video {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: relative;
-  
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
 
-
-    &__cont {
+  &__cont {
     position: relative;
     display: inline-block;
     background-color: $darkblk;
   }
 
-@include tablet {
-  
+  @include tablet {
     aspect-ratio: 16/8;
-}
+  }
 
-@include desktop {
+  @include desktop {
     aspect-ratio: 16/6;
+  }
 }
-
-}
-
-  
-// .next-button {
-//     position: absolute;
-//     top: 50%;
-//     right: 0; 
-
-//     transform: translateY(-50%);
-//     font-size: 1.5rem;
-//     color: #fff;
-//     background-color: rgba(0, 0, 0, 0.7);
-//     border: none;
-//     padding-right: $largeSpace;
-//     cursor: pointer;
-//     opacity: 0.05;
-//     transition: opacity 0.3s;
-//     :hover {
-//         opacity: 1;
-//       }
-
-//     &__image{
-//     z-index: 10;
-//   }
-// }
-
-  

@@ -10,13 +10,16 @@
       
     }
     
-    .dt-bottom__main {
-      
-    }
-    
     .dt-bottom__side-list {
       min-width: 42%;
       border-left: 2px solid $mercury;
       padding-top: $spacer;
     }
+}
+
+.video__cont__info {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
 }

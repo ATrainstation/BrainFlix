@@ -2,253 +2,248 @@
 @import "../../assets/styles/partials/1-Helpers/mixins.scss";
 
 * {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .upload {
-    &__content {
-        
-        @include tablet {
-            display: flex;
-            flex-direction: column;
-            margin: $largeSpace*2;
-        }
+  &__content {
+    padding-bottom: $maxSpace;
 
-        @include desktop {
-            flex-direction: row;
-            border-bottom: 2px solid $mercury;
-            margin: 0 $xlargeSpace*3;
-            
-        }
-    }
-
-    &__left {
-        @include desktop {
-            width: 50%;
-        }
-    }
-    &__right {
-        @include desktop {
-            width: 75%;
-        }
-    }
-
-    &__title {
-        color: $black;
-
-        padding: $largeSpace $spacer;
-    
-        border-bottom: 2px solid $mercury;
-        margin-bottom: $largeSpace;
-
-        @include tablet {
-            @include dt-pageHeader;
-            padding: $largeSpace $largeSpace*2;
-        }
-        
-        @include desktop {
-        margin: $largeSpace $xlargeSpace*3;
-        padding: $largeSpace 0;
-        }
-    }
-
-    &__thumbnail {
-        padding: 0 $largeSpace;
-        padding-bottom: $largeSpace;
-        
-        width: 100%;
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-        aspect-ratio: 16/10;
-        
-        @include tablet {
-        width: 50%;
-        }
-        
-        @include desktop {
-            width: 100%;
-            padding: 0 0;
-        }
-
-        &__label {
-
-            padding: 0 $largeSpace;
-            padding-bottom: 4px;
-
-            @include tablet {
-                width: 50%;
-                }
-                
-                @include desktop {
-                    padding: 0 0.2rem;
-                    width: 100%;
-                }
-        }
-    
-    &__cont {
-        width: 100%;
-        
-        @include desktop {
-            padding-left: 0;
-        }
-    }   
-
-}
-
-&__bottom {
     @include tablet {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: right;
-        align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin: $largeSpace * 2;
     }
 
     @include desktop {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+      flex-direction: row;
+      border-bottom: 2px solid $mercury;
+      margin: 0 $xlargeSpace * 3;
+    }
+  }
+
+  &__left {
+    @include desktop {
+      width: 50%;
+    }
+  }
+  &__right {
+    @include desktop {
+      width: 75%;
+    }
+  }
+
+  &__title {
+    color: $black;
+
+    padding: $largeSpace $spacer;
+
+    border-bottom: 2px solid $mercury;
+    margin-bottom: $largeSpace;
+
+    @include tablet {
+      @include dt-pageHeader;
+      padding: $largeSpace $largeSpace * 2;
+    }
+
+    @include desktop {
+      margin: $largeSpace $xlargeSpace * 3;
+      padding: $largeSpace 0;
+    }
+  }
+
+  &__thumbnail {
+    padding: 0 $largeSpace;
+    padding-bottom: $largeSpace;
+
     width: 100%;
-    padding-top: $largeSpace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16/10;
+
+    @include tablet {
+      width: 50%;
     }
-}
 
-    &__cancel {
-        color: $blue;
-        display: flex;
-        align-items: center;
-
-        
-        
-        @include desktop {
-            text-align: right;    
-        }
-
-        &__cont {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin-top: $largeSpace*2;
-
-            @include tablet {
-                width: 20%;
-                order: -2;
-                margin-top: 0;    
-            }
-
-            @include desktop {
-                margin-top: 0;
-                order: -1;
-                justify-content: flex-end;
-            }
-        }
+    @include desktop {
+      width: 100%;
+      padding: 0 0;
     }
+
+    &__label {
+      padding: 0 $largeSpace;
+      padding-bottom: 4px;
+
+      @include tablet {
+        width: 50%;
+      }
+
+      @include desktop {
+        padding: 0 0.2rem;
+        width: 100%;
+      }
+    }
+
+    &__cont {
+      width: 100%;
+
+      @include desktop {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__bottom {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: right;
+      align-items: center;
+    }
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      padding-top: $largeSpace;
+    }
+  }
+
+  &__cancel {
+    color: $blue;
+    display: flex;
+    align-items: center;
+
+    @include desktop {
+      text-align: right;
+    }
+
+    &__cont {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: $largeSpace * 2;
+
+      @include tablet {
+        width: 20%;
+        order: -2;
+        margin-top: 0;
+      }
+
+      @include desktop {
+        margin-top: 0;
+        order: -1;
+        justify-content: flex-end;
+      }
+    }
+  }
 }
-    .upload-form {
-        padding: 0 $largeSpace; 
+.upload-form {
+  padding: 0 $largeSpace;
 
-        &__cont {
-            padding: 0 $spacer;
+  &__cont {
+    padding: 0 $spacer;
 
-            @include desktop {
-            padding-right: 0;
-            }
-        }
+    @include desktop {
+      padding-right: 0;
+    }
+  }
 
-        &__title__label, &__desc__label {
-            @include subHeader2($silver);
-            font-size: 1rem;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            padding-top: $smallSpace;
-              }
-        
-        &__title__input {
-            height: 50px;
-            width: 100%;
-            background-color: $alabaster;
-            border: 2px solid $mercury;
-            border-radius: 6px;
-            font-size: 1.4rem;
+  &__title__label,
+  &__desc__label {
+    @include subHeader2($silver);
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: $smallSpace;
+  }
 
-            margin-bottom: $largeSpace;
+  &__title__input {
+    height: 50px;
+    width: 100%;
+    background-color: $alabaster;
+    border: 2px solid $mercury;
+    border-radius: 6px;
+    font-size: 1.4rem;
 
-            @include desktop {
-                height: 3.5rem;
-            }
+    margin-bottom: $largeSpace;
 
-            &::placeholder {
-                @include bodyCopy;
-                font-family: 'Avenir';
-                font-size: 1.1rem;
-                text-shadow: 0 0 1px rgba(51,51,51,0.3);
-                color: $black;
-                padding-left: 12px;
-              }
-          
-              &:focus {
-                  outline: 0;
-                  outline-color: transparent;
-                  outline-style: none;
-                  outline: 2px solid $blue;
-                }
-        }
+    @include desktop {
+      height: 3.5rem;
+    }
 
-        &__desc__input{
-            resize: none;
-            height: 7rem;
-            width: 100%;
-            background-color: $alabaster;
-            border: 2px solid $mercury;
-            border-radius: 6px;
-            font-size: 1.4rem;
+    &::placeholder {
+      @include bodyCopy;
+      font-family: "Avenir";
+      font-size: 1.1rem;
+      text-shadow: 0 0 1px rgba(51, 51, 51, 0.3);
+      color: $black;
+      padding-left: 12px;
+    }
 
-            margin-bottom: $largeSpace;
+    &:focus {
+      outline: 0;
+      outline-color: transparent;
+      outline-style: none;
+      outline: 2px solid $blue;
+    }
+  }
 
-            @include desktop {
-                height: 7.8rem;
-            }
+  &__desc__input {
+    resize: none;
+    height: 7rem;
+    width: 100%;
+    background-color: $alabaster;
+    border: 2px solid $mercury;
+    border-radius: 6px;
+    font-size: 1.4rem;
 
-            &::placeholder {
-                @include bodyCopy;
-                font-family: 'Avenir';
-                font-size: 1.1rem;
-                text-shadow: 0 0 1px rgba(51,51,51,0.3);
-                color: $black;
-                padding-top: 12px;
-                padding-left: 12px;
-              }
-          
-              &:focus {
-                  outline: 0;
-                  outline-color: transparent;
-                  outline-style: none;
-                  outline: 2px solid $blue;
-                }
-        }
+    margin-bottom: $largeSpace;
 
-        &__button {
-            display: flex;
-            justify-content: center;
-            margin: 0 $largeSpace;
-            
-            @include tablet {
-                width: 20%;
-                margin: 0 $largeSpace*2;
-                justify-content: flex-end;
-            }
+    @include desktop {
+      height: 7.8rem;
+    }
 
-            @include desktop {
-                width: 15%;
-                margin: 0 $xlargeSpace*3;
-            }
+    &::placeholder {
+      @include bodyCopy;
+      font-family: "Avenir";
+      font-size: 1.1rem;
+      text-shadow: 0 0 1px rgba(51, 51, 51, 0.3);
+      color: $black;
+      padding-top: 12px;
+      padding-left: 12px;
+    }
 
-        &__text {
-            margin: 0;
-            
-        }
-        }
+    &:focus {
+      outline: 0;
+      outline-color: transparent;
+      outline-style: none;
+      outline: 2px solid $blue;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin: 0 $largeSpace;
+
+    @include tablet {
+      width: 20%;
+      margin: 0 $largeSpace * 2;
+      justify-content: flex-end;
+    }
+
+    @include desktop {
+      width: 15%;
+      margin: 0 $xlargeSpace * 3;
+    }
+
+    &__text {
+      margin: 0;
+    }
+  }
 }
-    
