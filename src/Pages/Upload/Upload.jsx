@@ -5,6 +5,7 @@ import { useState } from "react";
 import uploadThumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Button } from "../../components/Modules/Button/Button";
+const apiUrl = import.meta.env.VITE_BASE_URL;
 
 export function Upload() {
   const [title, setTitle] = useState("");
